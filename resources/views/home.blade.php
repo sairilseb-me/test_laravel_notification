@@ -12,9 +12,14 @@
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
+                        {{ __('You are logged in!') }}
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    <form action="/create-posts" method="POST">
+                        @csrf
+                        <button type="submit" class="btn btn-primary">Run Post Creation</button>
+                    </form>
+                    
                 </div>
             </div>
         </div>
